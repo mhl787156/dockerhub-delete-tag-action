@@ -1,0 +1,28 @@
+name: delete-dockerhub-tag
+description: deletes a dockerhub tag
+inputs:
+  username:
+    description: 'Dockerhub username'
+    required: true
+  password:
+    description: 'Dockerhub password'
+    required: true
+  organisation:
+    description: 'Dockerhub organisation'
+    required: true
+  image:
+    description: 'Image with tag to be deleted'
+    required: true
+  tag:
+    description: 'Tag to be deleted'
+    required: true
+outputs: []
+
+runs:
+  using: "composite"
+  steps:
+    - name: Delete Container
+      shell: bash
+      runs: ./delete_tag.sh
+
+
