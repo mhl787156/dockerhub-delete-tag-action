@@ -32,7 +32,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          organisation: ${{ secrets.DOCKERHUB_ORGANISATION }}
+          organisation: ${{ secrets.DOCKERHUB_USERNAME }}
           image: mickeyli789/anothertest-app
           tag: tester
           
