@@ -34,8 +34,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          organisation: ${{ secrets.DOCKERHUB_USERNAME }}
-          image: mickeyli789/anothertest-app
+          organisation: mickeyli789
+          image: anothertest-app
           tag: tester
           
 

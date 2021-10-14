@@ -7,8 +7,6 @@
 # IMAGE="image"
 # TAG="tag"
 
-sudo apt-get install -y jq
-
 login_data() {
 cat <<EOF
 {
