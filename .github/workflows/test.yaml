@@ -29,13 +29,13 @@ jobs:
           push: true
           tags: mickeyli789/anothertest-app:tester
       
-      # - name: Delete Image
-      #   uses: mhl787156/dockerhub-delete-tag-action@main
-      #   with:
-      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
-      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
-      #     organisation: ${{ secrets.DOCKERHUB_USERNAME }}
-      #     image: mickeyli789/anothertest-app
-      #     tag: tester
+      - name: Delete Image
+        uses: mhl787156/dockerhub-delete-tag-action@main
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          organisation: ${{ secrets.DOCKERHUB_USERNAME }}
+          image: mickeyli789/anothertest-app
+          tag: tester
           
 
