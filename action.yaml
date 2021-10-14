@@ -5,7 +5,7 @@ inputs:
     description: 'Dockerhub username'
     required: true
   password:
-    description: 'Dockerhub password'
+    description: 'Dockerhub password (actual password not token)'
     required: true
   organisation:
     description: 'Dockerhub organisation'
