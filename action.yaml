@@ -34,6 +34,6 @@ runs:
         ORGANISATION: ${{inputs.organisation}}
         IMAGE: ${{inputs.image}}
         TAG: ${{inputs.tag}}
-      run: ./delete_tag.sh
+      run: $GITHUB_ACTION_PATH/delete_tag.sh
 
 
