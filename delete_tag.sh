@@ -17,8 +17,10 @@ EOF
 }
 
 TOKEN=`curl -s -H "Content-Type: application/json" -X POST -d "$(login_data)" "https://hub.docker.com/v2/users/login/" | jq -r .token`
+URL="https://hub.docker.com/v2/repositories/${ORGANIZATION}/${IMAGE}/tags/${TAG}/"
+echo "sending request to $URL"
 
-curl "https://hub.docker.com/v2/repositories/${ORGANIZATION}/${IMAGE}/tags/${TAG}/" \
+curl $URL \
 -X DELETE \
 -H "Authorization: JWT ${TOKEN}"
 
