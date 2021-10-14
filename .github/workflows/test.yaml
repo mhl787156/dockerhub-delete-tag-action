@@ -28,7 +28,7 @@ jobs:
           tags: mickeyli789/anothertest-app:tester
       
       - name: Delete Image
-        uses: mickeyli789/dockerhub_delete_tag_action@master
+        uses: mickeyli789/dockerhub_delete_tag_action@main
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
