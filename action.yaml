@@ -16,12 +16,17 @@ inputs:
   tag:
     description: 'Tag to be deleted'
     required: true
-outputs: []
+
+outputs: 
+  success:
+    description: 'If call was successful'
+    value: ${{ steps.deleter.outputs.success }}
 
 runs:
   using: "composite"
   steps:
     - name: Delete Container
+      id: deleter
       shell: bash
       runs: ./delete_tag.sh
 
