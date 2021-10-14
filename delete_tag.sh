@@ -3,7 +3,7 @@
 
 # USERNAME="docker_username"
 # PASSWORD="docker_password"
-# ORGANIZATION="organization"
+# ORGANISATION="organization"
 # IMAGE="image"
 # TAG="tag"
 
@@ -17,7 +17,7 @@ EOF
 }
 
 TOKEN=`curl -s -H "Content-Type: application/json" -X POST -d "$(login_data)" "https://hub.docker.com/v2/users/login/" | jq -r .token`
-URL="https://hub.docker.com/v2/repositories/${ORGANIZATION}/${IMAGE}/tags/${TAG}/"
+URL="https://hub.docker.com/v2/repositories/${ORGANISATION}/${IMAGE}/tags/${TAG}/"
 echo "sending request to $URL"
 
 curl $URL \
