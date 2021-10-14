@@ -28,6 +28,12 @@ runs:
     - name: Delete Container
       id: deleter
       shell: bash
-      runs: ./delete_tag.sh
+      env:
+        USERNAME: ${{inputs.username}}
+        PASSWORD: ${{inputs.password}}
+        ORGANISATION: ${{inputs.organisation}}
+        IMAGE: ${{inputs.image}}
+        TAG: ${{inputs.tag}}
+      run: ./delete_tag.sh
 
 
